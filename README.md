@@ -16,9 +16,9 @@ HelpSanca  é um aplicativo para indicar problemas urbanos reportados por outras
 - Etc...
 
 ## Persona:
-- O usuário está num local onde há problemas que são dificilmente reportados e resolvidos pela prefeitura ou outro orgão. Portanto, o usuário utiliza esse aplicativo 
+- Maria, advogada, 33 anos, está num local onde há problemas que são dificilmente reportados e resolvidos pela prefeitura ou outro orgão. Portanto, o usuário utiliza esse aplicativo 
 para denunciar os problemas à pessoas da região a fim de ficarem em alerta.
-- A prefeitura utiliza o aplicativo para ler as reclamações feitas pelos moradores, garantindo segurança e um lugar mais civilizado para estadia.
+- Márcio, prefeito, 54 anos, utiliza o aplicativo para ler as reclamações feitas pelos moradores, garantindo segurança e um lugar mais civilizado para estadia.
 
 ## Dores do cliente:
 - Perigos recorrentes por falta de infraestrutura da cidade
