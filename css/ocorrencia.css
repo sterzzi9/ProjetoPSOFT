@@ -238,69 +238,6 @@ html, body {
 }
 
 /* =========================================
-   CONTROLES (SELECT E SEARCH)
-========================================= */
-.linha-controles {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.campo-selecao {
-    flex: 1;
-    min-width: 180px;
-    padding: 10px 14px;
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid rgba(163, 193, 201, 0.8);
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #1A707A;
-    font-weight: 500;
-    font-size: 0.9rem;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.campo-selecao:focus {
-    border-color: #1A707A;
-    box-shadow: 0 0 10px rgba(26, 112, 122, 0.2);
-}
-
-.envelope-busca {
-    flex: 2;
-    min-width: 220px;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.icone-busca {
-    position: absolute;
-    left: 12px;
-    color: #1A707A;
-    font-size: 20px;
-}
-
-.campo-busca {
-    width: 100%;
-    padding: 10px 14px 10px 40px;
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid rgba(163, 193, 201, 0.8);
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #1A707A;
-    font-size: 0.9rem;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.campo-busca:focus {
-    border-color: #1A707A;
-    box-shadow: 0 0 10px rgba(26, 112, 122, 0.2);
-}
-
-/* =========================================
    LISTA DE OCORRÊNCIAS & CARDS
 ========================================= */
 .lista-ocorrencias {
