@@ -1,6 +1,6 @@
 # EG3 Solutions PSOFT
 
-<img width="500" height="273" alt="unnamed" src="https://github.com/user-attachments/assets/915998fc-5503-4174-8325-b9514338f905" />
+<img width="500" height="273" alt="unnamed" src="file:///C:/Users/45118580803/Downloads/Landing%20Page%20-%20HelpSanca/img/EG3.png" />
 
 A equipe: EG3 Solutions, consiste os integrantes:
 - Giuliano: Líder, trabalha sendo Full-Stack e BD.
