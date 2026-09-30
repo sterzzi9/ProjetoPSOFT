@@ -27,10 +27,11 @@ document.getElementById('signUpForm').addEventListener('submit', async function 
         return;
     }
 
-    const numSenha = Array.from(senhaInput);
+    const numSenha = Array.from(senhaInput.value);
 
     if (numSenha.length < 8) {
-        alert("A senha deve ter no mínimo 8 caracteres")
+        alert("A senha deve ter no mínimo 8 caracteres");
+        return;
     }
 
     const dadosUsuario = {

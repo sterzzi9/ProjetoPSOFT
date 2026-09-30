@@ -51,6 +51,7 @@ async function mostrarMarkers() {
             btnDeletar.style.backgroundColor = 'red';
             btnDeletar.style.marginLeft = '5px';
             btnDeletar.style.marginRight = '5px';
+            btnDeletar.style.borderRadius = '5px';
 
             const linha = document.createElement('hr');
             linha.style.height = '2px';
