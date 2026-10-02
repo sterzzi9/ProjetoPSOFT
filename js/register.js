@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:8080/usuarios' //mudar para localhost antes de iniciar
+const apiUrl = 'http://localhost:8080/usuarios';
 
 async function cadastrarUsuario(dadosUsuario) {
     const resposta = await fetch(apiUrl, {
@@ -11,7 +11,6 @@ async function cadastrarUsuario(dadosUsuario) {
         throw new Error(`Erro na API: ${resposta.status}`);
     }
 
-    // Retorna o objeto JSON do usuário criado retornado pelo backend
     return await resposta.json();
 }
 
@@ -27,27 +26,42 @@ document.getElementById('signUpForm').addEventListener('submit', async function 
         return;
     }
 
-    const numSenha = Array.from(senhaInput.value);
+    // 1. Verificação de e-mail existente
+    try {
+        const resposta = await fetch(apiUrl);
+        const usuarios = await resposta.json(); // Faltava o 'await' aqui
 
-    if (numSenha.length < 8) {
+        // .some() verifica se existe ao menos um e-mail idêntico ao digitado (.value)
+        const emailJaExiste = usuarios.some(u => u.email === emailInput.value.trim());
+
+        if (emailJaExiste) {
+            alert("Este e-mail já está em uso!");
+            return; // Interrompe o envio e impede o cadastro duplicado
+        }
+    } catch (erro) {
+        console.error("Ocorreu um erro ao verificar o e-mail:", erro);
+        alert("Erro ao validar dados com o servidor. Tente novamente.");
+        return;
+    }
+
+    // 2. Validação de senha (usando .length direto da String)
+    if (senhaInput.value.length < 8) {
         alert("A senha deve ter no mínimo 8 caracteres");
         return;
     }
 
     const dadosUsuario = {
         nome: nomeInput.value,
-        email: emailInput.value,
+        email: emailInput.value.trim(),
         senha: senhaInput.value,
     };
 
+    // 3. Cadastro do usuário
     try {
-        // 1. Aguarda a criação do usuário no banco
         const usuarioCriado = await cadastrarUsuario(dadosUsuario);
 
-        // 2. Salva os dados no localStorage convertendo para String JSON
         localStorage.setItem('usuario', JSON.stringify(usuarioCriado));
 
-        // 3. Redireciona a tela
         window.location.assign("map.html");
 
     } catch (erro) {
