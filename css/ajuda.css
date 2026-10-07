@@ -1,25 +1,52 @@
-/* base */
+/* =========================================
+   IMPORTAÇÃO DA FONTE POPPINS
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   RESET E CONFIGURAÇÕES GERAIS
+========================================= */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+html,
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: #f0f0f0;
-    min-height: 100%;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F9F4E8;
 }
 
-/* fundo do mapa */
-#main, #mapa {
+/* =========================================
+   MAPA DE FUNDO (BACKGROUND FIXED)
+========================================= */
+#mapa {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0 !important;
+    /* Fica no fundo */
+}
+
+/* =========================================
+   OVERLAY / ESCURECIMENTO DE FUNDO
+========================================= */
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    z-index: 900;
+    display: none;
 }
 
 /* Botão do Menu Sidebar */
@@ -48,7 +75,7 @@ body {
     box-shadow: 0 12px 25px rgba(0, 91, 127, 0.4);
 }
 
-/* Sidebar (Glassmorphism da Central de Ajuda) */
+/* Sidebar (Glassmorphism) */
 .sidebar {
     height: 100%;
     width: 0;
@@ -118,164 +145,201 @@ body {
     font-weight: 600;
 }
 
-.cabecalho-menu {
-    padding: 24px 20px 10px 24px;
+/* =========================================
+   BOTÃO DE MENU SUPERIOR
+========================================= */
+#main {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 800;
 }
 
-.cabecalho-menu h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #0b6067;
-}
-
-.navegacao-menu {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-}
-
-.menu-lateral a {
-    padding: 14px 24px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    color: #1e293b;
+.botao-menu-fixo {
+    background: linear-gradient(90deg, #1A707A, #005B7F);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 91, 127, 0.3);
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 12px;
-    transition: background-color 0.2s, color 0.2s;
-    white-space: nowrap;
+    gap: 8px;
 }
 
-.menu-lateral a:hover {
-    color: #000000;
-    background-color: #f1f5f9;
+.botao-menu-fixo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0, 91, 127, 0.4);
 }
 
-.menu-lateral .botao-fechar {
+/* =========================================
+   CONTAINER PRINCIPAL (GLASSMORPHISM)
+========================================= */
+.caixa-principal {
     position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 28px;
-    color: #64748b;
-    padding: 0;
-    background: none;
-    text-decoration: none;
-}
-
-.menu-lateral .botao-sair {
-    margin-top: auto;
-    color: #dc2626;
-    font-weight: 600;
-}
-
-/* central da ajuda */
-.cartao-ajuda {
-    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999 !important;
-    
-    background: #fcfcfc;
     width: 90%;
-    max-width: 440px;
-    max-height: 550px;
-    padding: 32px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    max-width: 750px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px 25px;
+
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    overflow-y: auto;
+    gap: 20px;
+    z-index: 10 !important;
+    /* Fica por cima do mapa */
 }
 
-/* título principal */
-.cartao-ajuda h1 {
-    font-size: 22px;
-    font-weight: 700;
-    color: #222222;
-    text-align: center;
-    margin-bottom: 16px;
-}
-
-/* subtítulo de boas-vindas com destaque */
-.texto-introducao {
-    font-size: 17px;
-    color: #0b6067;
-    text-align: center;
-    font-weight: 700;
-    padding-bottom: 6px;
-    letter-spacing: -0.2px;
-}
-
-/* perguntas */
-.secao-ajuda {
-    padding-bottom: 14px;
-    margin-bottom: 14px;
-    border-bottom: 1px solid #ededed;
-}
-
-.secao-ajuda h3 {
-    font-size: 15px;
-    font-weight: 700;
-    color: #222222;
-    margin-bottom: 4px;
-}
-
-.texto-suporte {
-    font-size: 13px;
-    color: #666666;
-    line-height: 1.4;
-    display: block;
-}
-
-/* botão principal e pra voltar */
-.botao-ajuda {
-    width: 100%;
-    background-color: #0b6067;
-    color: #ffffff;
-    border: none;
-    padding: 14px;
-    font-size: 15px;
-    font-weight: 700;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 10px;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.botao-ajuda:hover {
-    background-color: #08494f;
-}
-
-/* efeito pro clique ficar mais bonito */
-.botao-ajuda:active {
-    transform: scale(0.98);
-}
-
-/* grupo para posicionar links de voltar lado a lado */
-.grupo-links {
+/* Header de Ocorrências / Ajuda */
+.cabecalho-app {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 12px;
-    margin-top: 16px;
+    border-bottom: 2px solid rgba(26, 112, 122, 0.15);
+    padding-bottom: 12px;
 }
 
-.link-voltar {
-    flex: 1;
-    text-align: center;
-    color: #666666;
+.cabecalho-app h1 {
+    color: #005B7F;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.botao-icone {
+    background: rgba(26, 112, 122, 0.1);
+    border: none;
+    color: #005B7F;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.botao-icone:hover {
+    background: #005B7F;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   LISTA DE ITENS & CARDS
+========================================= */
+.lista-ocorrencias {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 100px;
+}
+
+.card-ocorrencia {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(163, 193, 201, 0.5);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.card-ocorrencia:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #1A707A;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag-categoria {
+    background: rgba(26, 112, 122, 0.15);
+    color: #005B7F;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.descricao-ocorrencia {
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* =========================================
+   BOTÕES E RODAPÉ
+========================================= */
+.botao-principal {
+    align-self: center;
+    background: linear-gradient(90deg, #1A707A, #005B7F);
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 91, 127, 0.25);
+    transition: all 0.3s ease;
+}
+
+.botao-principal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 91, 127, 0.35);
+}
+
+.rodape-app {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.botao-voltar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #1A707A;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
-.link-voltar:hover {
-    color: #222222;
+.botao-voltar:hover {
+    color: #ff6b00;
+}
+
+/* BARRA DE ROLAGEM */
+.caixa-principal::-webkit-scrollbar {
+    width: 6px;
+}
+
+.caixa-principal::-webkit-scrollbar-thumb {
+    background: rgba(26, 112, 122, 0.3);
+    border-radius: 10px;
 }
