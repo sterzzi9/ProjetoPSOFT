@@ -16,10 +16,10 @@
 
 | Foto / Membro | Função | Atribuições |
 | :--- | :--- | :--- |
-| **Giuliano** | Líder | Full-Stack & Banco de Dados |
-| **Ester** | Analista | Front-end & Design UI/UX |
-| **Gabrielle** | Integrante | Front-end & Design UI/UX |
-| **Gustavo** | Integrante | Back-end |
+| **Giuliano Danelli Pau** | Líder | Full-Stack & Banco de Dados |
+| **Ester Lima Antoniazzi** | Analista | Front-end & Design UI/UX |
+| **Gabrielle de Lima Callé** | Integrante | Front-end & Design UI/UX |
+| **Gustavo de Oliveira Arantes** | Integrante | Back-end |
 
 ---
 
@@ -96,8 +96,8 @@
 | Categoria | Tecnologias |
 | :--- | :--- |
 | **Front-end & Mobile** | `HTML5` • `CSS3` • `JavaScript` |
-| **Back-end & Banco de Dados** | `Java` • `MySQL` |
-| **APIs e Serviços** | `Leaflet e OpenStreetMap API` |
+| **Back-end & Banco de Dados** | `Java` • `MySQL 8` |
+| **APIs e Serviços** | `Leaflet, OpenStreetMap, Spring Boot e Maven` |
 
 ---
 
@@ -118,3 +118,10 @@ Siga os passos abaixo para executar a aplicação em seu ambiente de desenvolvim
 
 4. **Executando o Front-end:**  
    * Abra e execute a aplicação Front-end utilizando o **VSCode**. *(Caso precise instalar, veja este [Tutorial de Instalação do VSCode](https://www.youtube.com/watch?v=oDgjp7PfX7c))*.
+
+## 🏆 8. Considerações Finais
+O desenvolvimento do HelpSanca alcançou os objetivos propostos inicialmente com sucesso, entregando uma solução focada às necessidades da população e gestão pública de São Carlos.
+  Esse desenvolvimento foi feito através de vários testes de softwares que garantiram: 
+*O aperfeiçoamento de qualidade e usabilidade do projeto.*
+*A validação feita em cima de requisitos funcionais e não funcionais.*
+*A otimização da responsividade para vários tamanhos de tela.*
