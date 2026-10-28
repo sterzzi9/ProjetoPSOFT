@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚨 HelpSanca | EG3 Solutions - PSOFT
+# HelpSanca | EG3 Solutions - PSOFT
 
 <img width="1583" alt="HelpSanca Banner" src="https://github.com/user-attachments/assets/91079334-12e8-4d3a-96d4-b7df340545e1" />
 
@@ -35,28 +35,28 @@
 
 **HelpSanca** é um aplicativo voltado para indicar e monitorar problemas urbanos reportados pelos próprios cidadãos. O sistema facilita a denúncia de ocorrências do dia a dia, tais como:
 
-* 🕳️ Buracos em vias públicas
-* 💧 Vazamento de esgoto
-* 🧹 Acúmulo de entulho
-* ⚠️ *Entre outros problemas urbanos...*
+* Buracos em vias públicas
+* Vazamento de esgoto
+* Acúmulo de entulho
+* *Entre outros problemas urbanos...*
 
 ---
 
 ## 👤 2. Personas
 
-> 👩‍⚖️ **Maria (33 anos, Advogada)**  
+> **Maria (33 anos, Advogada)**  
 > Reside em um local com problemas de infraestrutura recorrentes que raramente são reportados e resolvidos pelos órgãos públicos. Utiliza o aplicativo para alertar outros moradores da região sobre os perigos locais.
 
-> 👨‍💼 **Márcio (54 anos, Prefeito)**  
+> **Márcio (54 anos, Prefeito)**  
 > Utiliza a plataforma para acompanhar as reclamações e chamados feitos pelos munícipes, garantindo mais segurança, agilidade nas manutenções e um ambiente mais civilizado para a população.
 
 ---
 
 ## 🛑 3. Dores do Cliente
 
-* ⚠️ Perigos recorrentes causados pela falta de infraestrutura urbana.
-* 🚫 Dificuldade e falta de canais diretos para reportar problemas aos órgãos públicos e avisar outros moradores.
-* 📍 Ausência de instruções claras de localização para informar a posição exata de um problema ou acidente.
+* Perigos recorrentes causados pela falta de infraestrutura urbana.
+* Dificuldade e falta de canais diretos para reportar problemas aos órgãos públicos e avisar outros moradores.
+* Ausência de instruções claras de localização para informar a posição exata de um problema ou acidente.
 
 ---
 
@@ -88,16 +88,6 @@
    * Localização exata
    * Horário do ocorrido
 4. **Encaminhamento:** Ao finalizar a denúncia, um aviso é enviado ao órgão especializado responsável.
-5. **Configurações:** O sistema conta com uma seção dedicada para edição de perfil, localização e preferências de notificações.
-
-### 🟡 Tipos de Agravamento
-
-| Nível | Cor | Descrição |
-| :---: | :---: | :--- |
-| **Leve** | 🟢 **Verde** | Situação de baixo impacto ou início de problema. |
-| **Moderado**| 🟡 **Amarelo** | Requer atenção, podendo gerar transtornos. |
-| **Grave** | 🔴 **Vermelho** | Perigo iminente ou risco à segurança. |
-| **Outros** | ⚪ **Branco** | Tipos diversos de ocorrências não categorizadas. |
 
 ---
 
