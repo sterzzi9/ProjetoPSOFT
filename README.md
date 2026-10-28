@@ -79,3 +79,52 @@
 ---
 
 ## 🔄 5. Funcionamento
+
+1. **Acesso e Autenticação:** A página inicial dispõe de botões para **Login** (e-mail/usuário e senha), **Cadastro** (nome, e-mail, usuário e senha) e **Redefinição de Senha**.
+2. **Navegação Principal:** Após se autenticar, o usuário é direcionado para o painel principal com um mapa interativo contendo os alertas reportados por outros moradores.
+3. **Criando um Alerta:** Na parte inferior da tela, o botão com o ícone **"+"** abre uma aba para registrar uma nova ocorrência. São informados:
+   * Tipo da situação
+   * Descrição breve
+   * Localização exata
+   * Horário do ocorrido
+4. **Encaminhamento:** Ao finalizar a denúncia, um aviso é enviado ao órgão especializado responsável.
+5. **Configurações:** O sistema conta com uma seção dedicada para edição de perfil, localização e preferências de notificações.
+
+### 🟡 Tipos de Agravamento
+
+| Nível | Cor | Descrição |
+| :---: | :---: | :--- |
+| **Leve** | 🟢 **Verde** | Situação de baixo impacto ou início de problema. |
+| **Moderado**| 🟡 **Amarelo** | Requer atenção, podendo gerar transtornos. |
+| **Grave** | 🔴 **Vermelho** | Perigo iminente ou risco à segurança. |
+| **Outros** | ⚪ **Branco** | Tipos diversos de ocorrências não categorizadas. |
+
+---
+
+## 🛠️ 6. Tecnologias Utilizadas
+
+| Categoria | Tecnologias |
+| :--- | :--- |
+| **Front-end & Mobile** | `Expo-React Native` • `HTML5` • `CSS3` • `JavaScript` |
+| **Back-end & Banco de Dados** | `Java` • `MySQL` |
+| **APIs e Serviços** | `Google Maps API` |
+
+---
+
+## 🚀 7. Rodando o Projeto (Localmente)
+
+Siga os passos abaixo para executar a aplicação em seu ambiente de desenvolvimento:
+
+1. **Clone do Repositório:**  
+   Faça o clone do código-fonte a partir da branch `master`.
+
+2. **Banco de Dados:**  
+   Instale o **MySQL Workbench**. *(Dúvidas? Consulte este [Tutorial de Instalação do MySQL](https://www.youtube.com/watch?v=9dfmJ4jNQrk))*.
+
+3. **Executando o Back-end:**  
+   * Abra e suba a aplicação Back-end utilizando o **IntelliJ IDEA**. *(Caso não possua, veja este [Tutorial do IntelliJ IDEA](https://www.youtube.com/watch?v=W_Pq8GsIIGM))*.
+   * **Atenção:** Atualize as credenciais no arquivo de configuração do projeto:  
+     `src/main/resources/application.properties` (Altere para a senha cadastrada no seu MySQL Workbench, se necessário).
+
+4. **Executando o Front-end:**  
+   * Abra e execute a aplicação Front-end utilizando o **VSCode**. *(Caso precise instalar, veja este [Tutorial do VSCode](https://www.youtube.com/watch?v=oDgjp7PfX7c))*.
