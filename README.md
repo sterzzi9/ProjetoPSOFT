@@ -27,7 +27,7 @@
 
 | **Acesse Online** | **Acesso via QR Code** |
 | :---: | :---: |
-| 🔗 [HelpSanca Landing Page](https://giulianodanellipau.github.io/HelpSanca-LandingPage/) | <img width="200" height="200" alt="QR Code HelpSanca" src="https://github.com/user-attachments/assets/71d324c4-3077-4cb8-ac67-90d4f6d949ae" /> |
+| 🔗 [HelpSanca Landing Page](https://giulianodanellipau.github.io/HelpSanca-LandingPage/) | <img width="200" height="200" alt="QRCODE_PSOFT_HELPSANCA" src="https://github.com/user-attachments/assets/24e1e3ce-95a5-4d6a-b8d1-66b344b905cb" /> |
 
 ---
 
