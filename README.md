@@ -80,7 +80,7 @@
 
 ## 🔄 5. Funcionamento
 
-1. **Acesso e Autenticação:** A página inicial dispõe de botões para **Login** (e-mail/usuário e senha), **Cadastro** (nome, e-mail, usuário e senha) e **Redefinição de Senha**.
+1. **Acesso e Autenticação:** A página inicial dispõe de botões para **Login** (e-mail e senha), **Cadastro** (nome, e-mail, usuário e senha) e **Redefinição de Senha**.
 2. **Navegação Principal:** Após se autenticar, o usuário é direcionado para o painel principal com um mapa interativo contendo os alertas reportados por outros moradores.
 3. **Criando um Alerta:** Na parte inferior da tela, o botão com o ícone **"+"** abre uma aba para registrar uma nova ocorrência. São informados:
    * Tipo da situação
