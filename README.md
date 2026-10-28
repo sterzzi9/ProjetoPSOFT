@@ -8,61 +8,68 @@ A equipe: EG3 Solutions, consiste os integrantes:
 - Gabrielle: Trabalha com Front-end e Design UI/UX.
 - Gustavo: Trabalha com Back-End.
 
-## Landing Page
+### Landing Page
 Link para a landing page: https://giulianodanellipau.github.io/HelpSanca-LandingPage/
 
 ## QRcode
 <img width="300" height="300" alt="qrcode_420815193_f1a4d6559f18138f66b0aa3034541ca2" src="https://github.com/user-attachments/assets/71d324c4-3077-4cb8-ac67-90d4f6d949ae" />
 
 
-## 1. O projeto:
+### 1. O projeto:
 HelpSanca  é um aplicativo para indicar problemas urbanos reportados por outras pessoas. Ele é utilizado para reportar problemas como:
 - Buracos
 - Vazamento de esgoto
 - Entulho
 - Etc...
 
-## 2. Persona:
+### 2. Persona:
 - Maria, advogada, 33 anos, está num local onde há problemas que são dificilmente reportados e resolvidos pela prefeitura ou outro orgão. Portanto, o usuário utiliza esse aplicativo 
 para denunciar os problemas à pessoas da região a fim de ficarem em alerta.
 - Márcio, prefeito, 54 anos, utiliza o aplicativo para ler as reclamações feitas pelos moradores, garantindo segurança e um lugar mais civilizado para estadia.
 
-## 3. Dores do cliente:
+### 3. Dores do cliente:
 - Perigos recorrentes por falta de infraestrutura da cidade
 - Não poder reportar para orgãos públicos e outros moradores
 - Não ter instrução de localização para informar algum problema/acidente
 
-## 4. Requisitos:
-Funcionais (o que o sistema faz):
+### 4. Requisitos:
+
+## Funcionais (o que o sistema faz):
 - Gerenciamento de usuários (página de login/cadastro)
 - Gerenciamento de um mapa da região
 - Processo dos avisos enviados pelos usuários
 - Adição do CEP para procura de um local com problemas
 - Gerenciamento de ocorrências criadas
 
-Não funcionais (performance, segurança, etc.):
+## Não funcionais (performance, segurança, etc.):
 - Sistema deve ser seguro
 - Sistema deve funcionar nas versões mais recentes dos navegadores
 - Sistema deve utilizar paleta de cores padrão
 - Sistema deve ter responsividade nas telas
 - Sistema deve ter conformidade com a LGPD
 
-## 5. Funcionamento: 
+### 5. Funcionamento: 
 Terá uma página inicial com um botão de login, onde é preciso informar um e-mail ou nome de usuário e uma senha para entrar. Um botão de cadastro onde pede um nome, o e-mail, usuario  e uma senha, e um texto para redefinir senha. Após o cadastro, o usuário é redirecionado a uma página onde incluirá um mapa com avisos que foram reportados por outros moradores.
 Na parte inferior da tela, haverá um botão com ícone "+" que quando clicado abrirá uma aba para reportar alguma situação desagradável, incluindo o tipo de situação, uma descrição breve, a localização e o horário. Depois de ser denunciada, um aviso será enviado para um orgão especializado no assunto retratado. Há uma aba de configurações, sobre o perfil, localização e notificações.
 
-Tipos de agravamento:
-Verde: situação leve
-Amarelo: situação moderada
-Vermelho: situação grave
-Branco: outros tipos de situação
+## Tipos de agravamento:
+- Verde: situação leve
+- Amarelo: situação moderada
+- Vermelho: situação grave
+- Branco: outros tipos de situação
 
-## 6. Tecnologias utilizadas: 
+### 6. Tecnologias utilizadas: 
 - API do Google Maps
 - Java
 - Expo-React Native
 - MySQL
 Para Web: HTML, CSS, JS.
 
-## 7. Rodando o Projeto (Localmente):
+### 7. Rodando o Projeto (Localmente):
+1- Clone o repositório
+2- Instale o MySQL Workbench (Link para um tutorial de instalação: https://www.youtube.com/watch?v=9dfmJ4jNQrk)  
+3- Suba o Back-end utilizando o IntelliJ IDEA
+3.1- Troque a senha do 'aplication.properties' para a senha do Workbench que você colocou
+4- Suba o Front-end utilizando o VSCode
+5- 
 
