@@ -122,9 +122,9 @@ Siga os passos abaixo para executar a aplicação em seu ambiente de desenvolvim
    Instale o **MySQL Workbench**. *(Dúvidas? Consulte este [Tutorial de Instalação do MySQL](https://www.youtube.com/watch?v=9dfmJ4jNQrk))*.
 
 3. **Executando o Back-end:**  
-   * Abra e suba a aplicação Back-end utilizando o **IntelliJ IDEA**. *(Caso não possua, veja este [Tutorial do IntelliJ IDEA](https://www.youtube.com/watch?v=W_Pq8GsIIGM))*.
+   * Abra e suba a aplicação Back-end utilizando o **IntelliJ IDEA**. *(Caso não possua, veja este [Tutorial de Instalação do IntelliJ IDEA](https://www.youtube.com/watch?v=W_Pq8GsIIGM))*.
    * **Atenção:** Atualize as credenciais no arquivo de configuração do projeto:  
      `src/main/resources/application.properties` (Altere para a senha cadastrada no seu MySQL Workbench, se necessário).
 
 4. **Executando o Front-end:**  
-   * Abra e execute a aplicação Front-end utilizando o **VSCode**. *(Caso precise instalar, veja este [Tutorial do VSCode](https://www.youtube.com/watch?v=oDgjp7PfX7c))*.
+   * Abra e execute a aplicação Front-end utilizando o **VSCode**. *(Caso precise instalar, veja este [Tutorial de Instalação do VSCode](https://www.youtube.com/watch?v=oDgjp7PfX7c))*.
