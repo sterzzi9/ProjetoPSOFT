@@ -111,7 +111,7 @@
 
 ---
 
-## 🚀 7. Rodando o Projeto (Localmente)
+## 🚀 7. Rodando o Projeto (Localmente no Computador)
 
 Siga os passos abaixo para executar a aplicação em seu ambiente de desenvolvimento:
 
