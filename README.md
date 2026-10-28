@@ -121,7 +121,11 @@ Siga os passos abaixo para executar a aplicação em seu ambiente de desenvolvim
 
 ## 🏆 8. Considerações Finais
 O desenvolvimento do HelpSanca alcançou os objetivos propostos inicialmente com sucesso, entregando uma solução focada às necessidades da população e gestão pública de São Carlos.
+
   **Esse desenvolvimento foi feito através de vários testes de softwares que garantiram:**
+  
   *O aperfeiçoamento de qualidade e usabilidade do projeto.*
+  
   *A validação feita em cima de requisitos funcionais e não funcionais.*
+  
   *A otimização da responsividade para vários tamanhos de tela.*
