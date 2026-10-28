@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda - HelpSanca</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- CSS da página da ajuda -->
+    <link rel="stylesheet" href="../css/ajuda.css">
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="../js/ajuda.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Mapa de fundo -->
+    <div id="mapa"></div>
+
+    <!-- Overlay / Escurecimento opcional -->
+    <div class="overlay"></div>
+
+    <!-- Botão para abrir o menu -->
+    <div id="main">
+        <button class="botao-menu-fixo openbtn" onclick="openNav()">
+            <span>☰</span> Menu
+        </button>
+    </div>
+
+    <!-- Sidebar / Menu Lateral -->
+    <div id="openSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>HelpSanca</h2>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="ocorrencia.html">Minhas Ocorrências</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="config.html">Configurações</a>
+            <a href="profile.html">Perfil</a>
+            <a href="index.html" id="logout" class="logout-btn">Sair</a>
+        </nav>
+    </div>
+
+    <!-- Container Principal (Central de Ajuda) com o mesmo tamanho dos outros cards -->
+    <div class="caixa-principal">
+
+        <!-- Cabeçalho -->
+        <div class="cabecalho-app">
+            <h1>Central de Ajuda</h1>
+            <button class="botao-icone" title="Suporte">
+                <span>❓</span>
+            </button>
+        </div>
+
+        <!-- Seção de introdução -->
+        <div class="card-ocorrencia">
+            <div class="card-topo">
+                <span class="tag-categoria">Introdução</span>
+            </div>
+            <p class="descricao-ocorrencia" style="font-weight: 500; font-size: 1rem; color: #005B7F;">
+                Como podemos te ajudar hoje?
+            </p>
+        </div>
+
+        <!-- Lista de dúvidas / Perguntas frequentes -->
+        <div class="lista-ocorrencias">
+
+            <div class="card-ocorrencia">
+                <div class="card-topo">
+                    <span class="tag-categoria">Dúvida 01</span>
+                </div>
+                <h3 style="color: #005B7F; font-size: 0.95rem; font-weight: 600;">Como registrar uma ocorrência?</h3>
+                <p class="descricao-ocorrencia">
+                    Clique no botão "+" no mapa, selecione o local e descreva o problema enfrentado na cidade.
+                </p>
+            </div>
+
+            <div class="card-ocorrencia">
+                <div class="card-topo">
+                    <span class="tag-categoria">Dúvida 02</span>
+                </div>
+                <h3 style="color: #005B7F; font-size: 0.95rem; font-weight: 600;">O mapa não mostra minha localização
+                </h3>
+                <p class="descricao-ocorrencia">
+                    Verifique se o GPS do celular/computador está ativado e se você deu permissão no navegador.
+                </p>
+            </div>
+
+            <div class="card-ocorrencia">
+                <div class="card-topo">
+                    <span class="tag-categoria">Dúvida 03</span>
+                </div>
+                <h3 style="color: #005B7F; font-size: 0.95rem; font-weight: 600;">Meus dados ficam públicos?</h3>
+                <p class="descricao-ocorrencia">
+                    Não. Suas informações pessoais ficam totalmente protegidas e não aparecem nos marcadores públicos.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Botão auxiliar para feedback -->
+        <button class="botao-principal" onclick="window.location.href='feedback.html'">
+            Relatar um Problema / Feedback
+        </button>
+
+        <!-- Rodapé com link de voltar -->
+        <div class="rodape-app">
+            <a href="map.html" class="botao-voltar">← Voltar ao Mapa</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

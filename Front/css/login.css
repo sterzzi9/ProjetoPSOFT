@@ -1,0 +1,214 @@
+/* =========================================
+   IMPORTAÇÃO DA FONTE POPPINS
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   RESET E CONFIGURAÇÕES GERAIS
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+    /* FUNDO COM GRADIENTES */
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(163, 193, 201, 0.35),
+            transparent 42%),
+        radial-gradient(circle at 100% 100%,
+            rgba(0, 91, 127, 0.45),
+            transparent 40%),
+        radial-gradient(circle at 0% 100%,
+            rgba(26, 112, 122, 0.25),
+            transparent 35%),
+        linear-gradient(135deg,
+            #F9F4E8 0%,
+            #F9F4E8 48%,
+            #F9F4E8 100%);
+}
+
+/* =========================================
+   LUZES DO FUNDO
+========================================= */
+body::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    top: -400px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: rgba(0, 91, 127, 0.20);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    right: -250px;
+    bottom: -250px;
+    border-radius: 50%;
+    background: rgba(163, 193, 201, 0.25);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+/* =========================================
+   CARD DE VIDRO (GLASSMORPHISM)
+========================================= */
+.card-senha {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+
+    /* EFEITO DE VIDRO */
+    background: rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.30);
+
+    text-align: center;
+}
+
+.card-senha img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   TEXTOS (POPPINS)
+========================================= */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    color: #005B7F;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.subtitulo {
+    font-family: 'Poppins', sans-serif;
+    color: #1A707A;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+.campo-input {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 14px 5px;
+    border: none;
+    border-bottom: 2px solid rgba(163, 193, 201, 0.60);
+    border-radius: 0;
+    font-size: 0.95rem;
+    background: transparent;
+    color: #1A707A;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+    display: block;
+    outline: none;
+}
+
+.campo-input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: #1A707A;
+}
+
+.campo-input:focus {
+    border-bottom-color: #1A707A;
+    background: rgba(255, 107, 0, 0.03);
+    outline: none;
+    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.08);
+}
+
+/* =========================================
+   BOTÃO SUBMIT (COM MOVIMENTO HOVER)
+========================================= */
+button[type="submit"] {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #1A707A, #005B7F);
+    color: white;
+    border: none;
+    border-radius: 13px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 91, 127, 0.35);
+}
+
+/* =========================================
+   LINKS E RODAPÉ
+========================================= */
+.footer-links {
+    margin-top: 25px;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #1A707A;
+    margin-bottom: 8px;
+}
+
+.link-voltar {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #005B7F;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.link-voltar:hover {
+    color: #ff6b00;
+    text-decoration: underline;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+@media (max-width: 480px) {
+    .card-senha {
+        padding: 30px 25px;
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}

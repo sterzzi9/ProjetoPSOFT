@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/map.css">
+    <script src="../js/map.js" defer></script>
+
+    <!-- API do Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <title>Visitante</title>
+</head>
+
+<body>
+    <div id="main">
+
+        <!-- Sidebar -->
+        <div id="openSidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="sidebar-header">
+                <h2>Help Sanca</h2>
+            </div>
+            <div class="sidebar-nav">
+                <a href="login.html">Login</a>
+                <a href="register.html">Cadastrar</a>
+            </div>
+        </div>
+
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+
+        <!-- Div do Mapa Principal -->
+        <div id="mapa"></div>
+
+        <footer>
+            <p>Entre para avisar sobre um problema.</p>
+            <div class="botoes">
+                <a href="register.html">Criar conta</a>
+                <a href="login.html">Fazer Login</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

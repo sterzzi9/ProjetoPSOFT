@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Ocorrências - HelpSanca</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../css/ocorrencia.css">
+    <script src="../js/ocorrencia.js" defer></script>
+</head>
+
+<body>
+
+    <div id="mapa"></div>
+
+    <div id="fundo-escuro" class="overlay"></div>
+
+    <!-- Sidebar / Menu Lateral -->
+        <div id="openSidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2>HelpSanca</h2>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="ocorrencia.html">Minhas Ocorrências</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="ajuda.html">Ajuda</a>
+                <a href="config.html">Configurações</a>
+                <a href="profile.html">Perfil</a>
+                <a href="index.html" id="logout" class="logout-btn">Sair</a>
+            </nav>
+        </div>
+
+        <button class="openbtn" onclick="openNav()">
+            <span>☰</span> Menu
+        </button>
+
+    <div class="caixa-principal">
+        <header class="cabecalho-app">
+            <h1>Minhas ocorrências</h1>
+        </header>
+
+        <div id="listona"></div>
+
+        <footer class="rodape-app">
+            <a href="map.html" class="botao-voltar">
+                <span>Voltar ao Mapa</span>
+            </a>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/register.js" defer></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="card-senha">
+        <img src="../img/HelpSancaLogo.png" alt="Logo do App">
+
+        <h1>Comece sua jornada!</h1>
+        <p class="subtitulo">Insira seus dados abaixo para criar sua conta.</p>
+
+        <form id="signUpForm">
+            <input type="text" class="campo-input" id="nome-cadastro" placeholder="Nome Completo" required />
+            <input type="email" class="campo-input" id="email-cadastro" placeholder="E-mail" required />
+            <input type="password" class="campo-input" id="senha-cadastro" placeholder="Crie uma senha" required />
+
+            <button type="submit" id="btn-cadastro">Cadastrar</button>
+        </form>
+
+        <div class="footer-links">
+            <p>Já tem uma conta? <a href="login.html" class="link-voltar">Faça Login</a></p>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html" class="link-voltar">
+                Voltar
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

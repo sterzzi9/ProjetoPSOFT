@@ -1,0 +1,199 @@
+/* =========================================
+   IMPORTAÇÃO DAS FONTES (Poppins & Quicksand)
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
+
+/* =========================================
+   RESET E CONFIGURAÇÕES GERAIS
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Quicksand', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(163, 193, 201, 0.35),
+            transparent 42%),
+        radial-gradient(circle at 100% 100%,
+            rgba(0, 91, 127, 0.45),
+            transparent 40%),
+        radial-gradient(circle at 0% 100%,
+            rgba(26, 112, 122, 0.25),
+            transparent 35%),
+        linear-gradient(135deg,
+            #F9F4E8 0%,
+            #F9F4E8 48%,
+            #F9F4E8 100%);
+}
+
+/* =========================================
+   FUNDO ONDULADO ANIMADO (ANIMAÇÃO ATRÁS)
+========================================= */
+.wave-bg {
+    position: absolute;
+    width: 200vw;
+    height: 120vh;
+    background: linear-gradient(180deg, #1A707A 0%, #276f8b 100%);
+    border-radius: 50% 50% 0 0;
+    bottom: -80vh;
+    left: -50vw;
+    z-index: 1;
+    pointer-events: none;
+    animation: balancoLento 15s ease-in-out infinite;
+}
+
+@keyframes balancoLento {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        border-radius: 50% 40% 0 0;
+    }
+    50% {
+        transform: translateY(-30px) rotate(2deg);
+        border-radius: 40% 50% 0 0;
+    }
+}
+
+/* =========================================
+   LUZES DO FUNDO
+========================================= */
+body::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    top: -400px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: rgba(0, 91, 127, 0.20);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    right: -250px;
+    bottom: -250px;
+    border-radius: 50%;
+    background: rgba(163, 193, 201, 0.25);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+/* =========================================
+   CARD DE VIDRO PRINCIPAL (ENVOLVE LOGO E CONTEÚDO)
+========================================= */
+#homepage {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.733);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.30);
+}
+
+/* LOGO DENTRO DO CARD */
+#homepage img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* TÍTULO EM POPPINS */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    color: #005B7F;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* =========================================
+   ÁREA DAS PÁGINAS E BOTÕES COM MOVIMENTO
+========================================= */
+.pages {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+}
+
+.pages p {
+    margin: 15px 0;
+}
+
+/* BOTÕES ESTILIZADOS QUE SE MOVIMENTAM NO HOVER */
+.pages a {
+    width: 100%;
+    padding: 14px;
+    color: #1A707A;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 13px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.pages a:hover,
+.pages a:active {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 91, 127, 0.35);
+}
+
+/* =========================================
+   RODAPÉ
+========================================= */
+.footer {
+    position: absolute;
+    bottom: 15px;
+    font-size: 0.9rem;
+    color: #F9F4E8;
+    z-index: 2;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+@media (max-width: 480px) {
+    #homepage {
+        padding: 30px 25px;
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}

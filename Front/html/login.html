@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js" defer></script>
+    <title>Login - HelpSanca</title>
+</head>
+
+<body>
+    <!-- Elemento para renderizar a onda animada do CSS -->
+    <div class="wave-bg"></div>
+
+    <div class="card-senha">
+        <img src="../img/HelpSancaLogo.png" alt="Logo HelpSanca">
+
+        <h1>Bem-vindo de volta!</h1>
+        <p class="subtitulo">Insira suas credenciais para acessar sua conta.</p>
+
+        <form id="loginForm">
+            <input type="email" class="campo-input" id="email-login" placeholder="E-mail" required />
+            <input type="password" class="campo-input" id="senha-login" placeholder="Senha" required />
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <div class="footer-links">
+            <p>Esqueceu a senha? <a href="password.html" class="link-voltar">Redefinir</a></p>
+            <p>Não tem uma conta? <a href="register.html" class="link-voltar">Cadastre-se</a></p>
+        </div>
+        
+        <div class="footer-links" style="margin-top: 15px;">
+            <a href="index.html" class="link-voltar">Voltar</a>
+        </div>
+    </div>
+</body>
+
+</html>

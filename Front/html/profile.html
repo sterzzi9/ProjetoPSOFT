@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - HelpSanca</title>
+
+    <!-- Fonte Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Scripts JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/profile.js" defer></script>
+
+    <div id="mapa"></div>
+
+    <!-- Fundo escuro ao abrir o menu -->
+    <div id="fundo-escuro" class="overlay"></div>
+
+    <!-- Sidebar / Menu Lateral -->
+    <nav id="menu-lateral" class="sidebar">
+        <div class="sidebar-topo">
+            <h2>HelpSanca</h2>
+            <button id="fechar-menu">&times;</button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="ocorrencia.html">Minhas Ocorrências</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="ajuda.html">Ajuda</a></li>
+            <li><a href="config.html">Configurações</a></li>
+            <li><a href="profile.html">Perfil</a></li>
+            <li><a href="index.html" class="logout-btn">Sair</a></li>
+        </ul>
+    </nav>
+
+    <!-- Botão superior para abrir o menu -->
+    <div id="main">
+        <button id="abrir-menu" class="openbtn">
+            <span>☰</span> Menu
+        </button>
+
+    </div>
+
+    <!-- Card de Perfil (Glassmorphism) -->
+    <div class="perfil-container">
+        <h1>Perfil</h1>
+
+        <div class="perfil-info">
+            <div class="formulario-perfil">
+                <label for="txt-nome">Nome completo</label>
+                <input type="text" id="txt-nome" class="txt-input" placeholder="Seu nome completo">
+
+                <label for="txt-email">E-mail</label>
+                <input type="email" id="txt-email" class="txt-input" placeholder="seuemail@exemplo.com">
+
+                <label for="txt-user">Usuário</label>
+                <input type="text" id="txt-user" class="txt-input" placeholder="@usuario">
+
+                <label for="txt-senha">Senha</label>
+                <div class="senha-container">
+                    <input type="password" id="txt-senha" class="txt-input" placeholder="••••••••">
+                </div>
+
+                <p><a href="password.html" class="link-redefinir">Esqueceu a senha? Clique aqui.</a></p>
+            </div>
+        </div>
+
+        
+        <div class="footer-links">
+            <a href="map.html" class="link-voltar">
+                &larr; Voltar
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

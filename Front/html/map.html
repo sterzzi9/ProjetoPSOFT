@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/map.css">
+    <script src="../js/map.js" defer></script>
+
+    <!-- API do Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <title>HelpSanca - Mapa</title>
+</head>
+
+<body>
+    <div id="main">
+
+        <!-- Sidebar / Menu Lateral -->
+        <div id="openSidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2>HelpSanca</h2>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="ocorrencia.html">Minhas Ocorrências</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="ajuda.html">Ajuda</a>
+                <a href="config.html">Configurações</a>
+                <a href="profile.html">Perfil</a>
+                <a href="index.html" id="logout" class="logout-btn">Sair</a>
+            </nav>
+        </div>
+
+        <button class="openbtn" onclick="openNav()">
+            <span>☰</span> Menu
+        </button>
+
+        <!-- Div do Mapa Principal -->
+        <div id="mapa"></div>
+
+        <!-- Botão Flutuante de Adicionar Ocorrência -->
+        <button class="addButton" onclick="openReport()">+</button>
+
+        <!-- PopUp / Modal de Reportar Problema -->
+        <div id="openReport" class="popUpReport">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeReport()">&times;</a>
+            
+            <div class="report-header">
+                <h2>Reportar Problema</h2>
+            </div>
+
+            <form id="reportProblemForm">
+                <label>Tipo do problema:</label>
+                <div class="custom-select-container">
+                    <div class="custom-select-trigger" id="selectTrigger">
+                        <div class="selected-option">
+                            <img src="../img/Hole.png" alt="Buraco pequeno" class="option-icon">
+                            <span>Buraco pequeno</span>
+                        </div>
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                    <div class="custom-options">
+                        <div class="custom-option selected" data-text="Buraco pequeno" data-icon="img/Hole.png">
+                            <img src="../img/Hole.png" class="option-icon"> <span>Buraco pequeno</span>
+                        </div>
+                        <div class="custom-option" data-text="Buraco médio" data-icon="../img/Hole.png">
+                            <img src="../img/Hole.png" class="option-icon"> <span>Buraco médio</span>
+                        </div>
+                        <div class="custom-option" data-text="Buraco grande" data-icon="../img/Hole.png">
+                            <img src="../img/Hole.png" class="option-icon"> <span>Buraco grande</span>
+                        </div>
+                        <div class="custom-option" data-text="Enchente" data-icon="../img/Flood.png">
+                            <img src="../img/Flood.png" class="option-icon"> <span>Enchente</span>
+                        </div>
+                        <div class="custom-option" data-text="Entulho / Deslizamento" data-icon="../img/Landslide.png">
+                            <img src="../img/Landslide.png" class="option-icon"> <span>Entulho / Deslizamento</span>
+                        </div>
+                        <div class="custom-option" data-text="Incêndio" data-icon="../img/Fire.png">
+                            <img src="../img/Fire.png" class="option-icon"> <span>Incêndio</span>
+                        </div>
+                        <div class="custom-option" data-text="Vazamento de esgoto" data-icon="../img/Sewage.png">
+                            <img src="../img/Sewage.png" class="option-icon"> <span>Vazamento de esgoto</span>
+                        </div>
+                        <div class="custom-option" data-text="Vazamento de água" data-icon="../img/Leakage.png">
+                            <img src="../img/Leakage.png" class="option-icon"> <span>Vazamento de água</span>
+                        </div>
+                        <div class="custom-option" data-text="Mato alto" data-icon="../img/Grass.png">
+                            <img src="../img/Grass.png" class="option-icon"> <span>Mato alto</span>
+                        </div>
+                        <div class="custom-option" data-text="Outro." data-icon="../img/yellowWarning.png">
+                            <img src="../img/yellowWarning.png" class="option-icon"> <span>Outro...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <label for="desc">Descrição:</label>
+                <textarea id="desc" rows="3" placeholder="Descreva brevemente o problema."></textarea>
+
+                <!-- BUSCA DE ENDEREÇO -->
+                <label for="inputEndereco">Endereço do Local:</label>
+                <div class="search-address-container">
+                    <input type="text" id="inputEndereco" placeholder="Ex.: Nome da rua, cidade">
+                    <button type="button" id="btnBuscarEndereco">Buscar</button>
+                </div>
+
+                <label>Confirme a localização no mapa (ou clique no mapa):</label>
+                <div id="minimap"></div>
+
+                <button type="submit" class="submitButton">Enviar Reporte</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
