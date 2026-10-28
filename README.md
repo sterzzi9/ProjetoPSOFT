@@ -43,4 +43,4 @@ Branco: outros tipos de situação
 Para Web: HTML, CSS, JS.
 
 ## 6. Landing Page
-Link para a landing page: <a href="https://gabirielle.github.io/landingpage/">
+Link para a landing page: https://gabirielle.github.io/landingpage/
