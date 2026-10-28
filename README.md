@@ -8,6 +8,9 @@ A equipe: EG3 Solutions, consiste os integrantes:
 - Gabrielle: Trabalha com Front-end e Design UI/UX.
 - Gustavo: Trabalha com Back-End.
 
+## Landing Page
+Link para a landing page: https://gabirielle.github.io/landingpage/
+
 ## 1. O projeto:
 HelpSanca  é um aplicativo para indicar problemas urbanos reportados por outras pessoas. Ele é utilizado para reportar problemas como:
 - Buracos
@@ -41,6 +44,3 @@ Branco: outros tipos de situação
 - Expo-React Native
 - MySQL
 Para Web: HTML, CSS, JS.
-
-## 6. Landing Page
-Link para a landing page: https://gabirielle.github.io/landingpage/
