@@ -95,9 +95,9 @@
 
 | Categoria | Tecnologias |
 | :--- | :--- |
-| **Front-end & Mobile** | `Expo-React Native` • `HTML5` • `CSS3` • `JavaScript` |
+| **Front-end & Mobile** | `HTML5` • `CSS3` • `JavaScript` |
 | **Back-end & Banco de Dados** | `Java` • `MySQL` |
-| **APIs e Serviços** | `Google Maps API` |
+| **APIs e Serviços** | `Leaflet e OpenStreetMap API` |
 
 ---
 
