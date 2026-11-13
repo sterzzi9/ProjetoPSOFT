@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - HelpSanca</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="../css/config.css">
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/config.js" defer></script>
+</head>
+
+<body data-static-map="true">
+
+    <div id="openSidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidebar-header">
+            <h2>HelpSanca</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="ocorrencia.html">Minhas Ocorrências</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="config.html">Configurações</a>
+            <a href="profile.html">Perfil</a>
+            <a href="index.html" class="logout-btn">Sair</a>
+        </nav>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">
+            <span>☰</span> Menu
+        </button>
+        <button id="reportIssue" class="addButton">+</button>
+
+        <div id="mapa"></div>
+    </div>
+
+    <div class="config-container">
+        <h1>Configurações</h1>
+
+        <div class="config-section">
+            <div class="config-info">
+                <h3>Notificações</h3>
+                <label for="notificacoes">Ativar notificações do sistema</label>
+            </div>
+            <input type="checkbox" id="notificacoes" name="notificacoes">
+        </div>
+
+        <div class="config-section">
+            <div class="config-info">
+                <h3>Acessibilidade</h3>
+                <label for="acessibilidade">Tamanho da fonte (px)</label>
+            </div>
+            <input type="number" id="acessibilidade" name="acessibilidade" value="16">
+        </div>
+
+        <div class="config-section">
+            <div class="config-info">
+                <h3>Privacidade</h3>
+                <label for="privacidade">Quem pode ver seu perfil</label>
+            </div>
+            <select id="privacidade" name="privacidade">
+                <option value="todos">Todos</option>
+                <option value="quem-tem-conta">Quem tem conta</option>
+                <option value="ninguem">Ninguém</option>
+            </select>
+        </div>
+
+        <div class="config-section">
+            <div class="config-info">
+                <h3>Localização</h3>
+                <label for="permissao-localizacao">Permitir a localização</label>
+            </div>
+            <input type="checkbox" id="permissao-localizacao" name="localizacao">
+        </div>
+
+        <div class="footer-links">
+            <a href="map.html" class="link-voltar">Voltar</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

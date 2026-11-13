@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação do App</title>
+
+    <!-- Leaflet CSS (Obrigatório para o Mapa renderizar) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- CSS do Feedback -->
+    <link rel="stylesheet" href="../css/feedback.css">
+
+    <!-- Leaflet JS + Scripts do Mapa e Menu -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/feedback.js" defer></script>
+</head>
+
+<body data-static-map="true">
+
+     <!-- Sidebar / Menu Lateral -->
+        <div id="openSidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2>HelpSanca</h2>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="ocorrencia.html">Minhas Ocorrências</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="ajuda.html">Ajuda</a>
+                <a href="config.html">Configurações</a>
+                <a href="profile.html">Perfil</a>
+                <a href="index.html" id="logout" class="logout-btn">Sair</a>
+            </nav>
+        </div>
+
+    <!-- ESTRUTURA DO MAPA (FIXO NO FUNDO) E BOTÕES -->
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">
+            <span>☰</span> Menu
+        </button>
+        <button id="reportIssue" class="addButton">+</button>
+        
+        <!-- ELEMENTO ONDE O MAPA É CARREGADO VIA JS -->
+        <div id="mapa"></div>
+    </div>
+
+    <!-- CARD CONTAINER DE FEEDBACK (SOBREPOSTO AO MAPA) -->
+    <div class="config-container">
+        <h1>Feedback do App</h1>
+
+        <!-- 1. AVALIAÇÃO COM ESTRELAS -->
+        <div class="config-section feedback-center">
+            <div class="config-info">
+                <h3>Como você avalia a experiência?</h3>
+                <div class="estrelas">
+                    <div class="rating-container" id="rating-stars">
+                        <button class="star" type="button" data-value="1">★</button>
+                        <button class="star" type="button" data-value="2">★</button>
+                        <button class="star" type="button" data-value="3">★</button>
+                        <button class="star" type="button" data-value="4">★</button>
+                        <button class="star" type="button" data-value="5">★</button>
+                    </div>
+                    <input type="hidden" id="rating-value" name="rating" value="0">
+                </div>
+                <label>Clique nas estrelas para selecionar</label>
+            </div>
+        </div>
+
+        <!-- 2. GOSTOU DO SITE? (SIM / NÃO) -->
+        <div class="config-section">
+            <div class="config-info">
+                <h2>Gostou do site?</h2>
+            </div>
+            <div class="feedback-actions">
+                <button class="btn-thumb" type="button" data-gostou="Sim">Sim</button>
+                <button class="btn-thumb" type="button" data-gostou="Não">Não</button>
+            </div>
+        </div>
+
+        <!-- 3. COMENTÁRIO (OPCIONAL) -->
+        <div class="config-section" style="flex-direction: column; align-items: flex-start;">
+            <div class="config-info">
+                <h2>Comentário (opcional)</h2>
+            </div>
+            <textarea id="comentario" placeholder="Adicione seu comentário aqui..." class="input-comentario"></textarea>
+        </div>
+
+        <!-- BOTÃO DE ENVIAR -->
+        <button class="btn-enviar" type="button" id="btn-enviar-feedback">Enviar Feedback</button>
+
+        <div class="footer-links">
+            <a href="map.html" class="link-voltar">Voltar</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
